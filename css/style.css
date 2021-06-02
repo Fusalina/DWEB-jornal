@@ -1,0 +1,293 @@
+img {
+  border-style: unset;
+}
+body {
+  background: rgb(241, 241, 241);
+  margin-right: 120px;
+  margin-left: 120px;
+  margin-bottom: 120px;
+}
+hr {
+  color: #e00808;
+  height: 3%;
+  width: 30%;
+  margin: auto;
+  justify-content: left;
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, h3, h6 {
+  font-family: Helvetica, sans-serif;
+  color: dimgray;
+}
+p {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Helvetica, sans-serif;
+}
+li {
+  list-style: none;
+}
+
+.menu {
+  align-content: left;
+  display: flex;
+}
+.menu li {
+  margin-left: 30px;
+}
+.menu li a {
+  display: block;
+  
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+  padding: 14px 16px;
+  color: dimgray;
+}
+
+.menu a:hover {
+  background-color: #908e9248;
+}
+.voltar {
+  list-style: none;
+}
+.destaque {
+  display: flex;
+  align-items: flex-start;
+  margin: 3px;
+}
+.destaque_imagem {
+  padding: 12px;
+}
+.destaque_texto {
+  margin-top: -34px;
+  padding: 12px;
+  text-align: left;
+  font-size: 17px;
+}
+.destaque_texto h3 {
+  font-size: 30px;
+}
+.destaque_sub_conteudo {
+  display: flex;
+  align-items: flex-start;
+  margin: 3px;
+}
+.destaque_sub_conteudo_imagem_1 {
+  padding: 12px;
+}
+.destaque_sub_conteudo_texto {
+  margin-top: -30px;
+  padding: 7px;
+  font-size: 21px;
+  text-align: left;
+}
+.destaque_sub_conteudo_texto h3 {
+  font-size: 30px;
+}
+.destaque_sub_conteudo_imagem_2 {
+  margin-top: 21px;
+  display: table-cell;
+  padding: 7px;
+}
+
+.conteudo {
+  display: table;
+  flex-flow: row wrap;
+  padding: 7px;
+  font-family: Helvetica, sans-serif;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 70vh;
+}
+
+.content-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 120vh;
+}
+
+.card{
+  background: #fff;
+  box-shadow: 0px 2px 18px rgba(51, 47, 47, 0.226);
+  border-radius: 20px;
+  margin: 20px;
+}
+.top-card{
+  padding: 20px;
+}
+
+.medium-card{
+  height: 200px;
+  width: 100%;
+  padding: 0%;
+}
+
+.medium-card-main{
+  height: 400px;
+  width: 100%;
+  padding: 0%;
+}
+
+.image-educacao{
+  background: url("https://s2.glbimg.com/5v3dod2QWJ2fyUQWOBy0oSFvICY=/0x0:2048x1152/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/H/d/yoaQ5BQsSPfEkdHFQk9w/vacinaj-15.jpg")center/cover;
+}
+
+.image-politica{
+  background: url("https://veja.abril.com.br/wp-content/uploads/2021/04/000_98J7J9.jpg?quality=70&strip=info&resize=680,453")center/cover;
+}
+
+.image-saude{
+  background: url("https://www.arapongas.pr.gov.br/saude/thumb.php?img=../imagens/noticias/bcc047ae7ef61faee1ac6c383b89099e.jpg&w=240&h=195")center/cover;
+}
+
+.botton-card{
+  padding: 20px;
+}
+
+.actions-card{
+  margin: auto;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.actions-card a{
+  color: #88868671;
+  padding: 14px 16px;
+  font-family: Helvetica, sans-serif;
+}
+
+.actions-card a:hover{
+  background-color: #d3d0d071;
+  font-family: Helvetica, sans-serif;
+}
+
+.actions-card a:visited{
+  color: #6e71a071;
+  font-family: Helvetica, sans-serif;
+}
+
+.actions{
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #88878771;
+}
+
+#bar-card{
+  color: rgb(206, 202, 202);
+  height: 3%;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+#title {
+  color: dimgray;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Helvetica, sans-serif;
+  font-size: 52px;
+}
+
+#sub-title {
+  color: rgb(155, 154, 154);
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  font-size: 21px;
+}
+
+#pagrefer {
+  color: dimgray;
+  display: flex;
+  justify-content: space-evenly;
+}
+#bar_title {
+  color: dimgray;
+  height: 3%;
+  width: 93%;
+  margin: auto;
+  justify-content: center;
+}
+
+#rodape {
+  position: static;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+#sec_dir {
+  display: flex;
+  align-items: flex-start;
+  padding: 3px;
+}
+#sec_dir h3 {
+  font-size: 25px;
+}
+
+#sec_esq {
+  display: table;
+  align-items: flex-start;
+  padding: 3px;
+}
+#sec_esq h3 {
+  font-size: 25px;
+}
+
+#noticia_1 {
+  display: table-cell;
+  margin-left: 12px;
+  padding: 3px;
+  text-align: left;
+}
+#noticia_2 {
+  display: table-cell;
+  margin-left: 12px;
+  padding: 3px;
+  text-align: left;
+}
+#noticia_3 {
+  display: table-cell;
+  margin-left: 12px;
+  padding: 3px;
+  text-align: left;
+}
+#noticia_4 {
+  display: table-cell;
+  margin-left: 12px;
+  padding: 3px;
+  text-align: left;
+}
+#noticia_5 {
+  display: table-cell;
+  margin-left: 12px;
+  padding: 3px;
+  text-align: left;
+}
+#noticia_6 {
+  display: table-cell;
+  margin-left: 12px;
+  padding: 3px;
+  text-align: left;
+}
+#search-box {
+  position: relative;
+  width: 30%;
+  margin: 0;
+}
+

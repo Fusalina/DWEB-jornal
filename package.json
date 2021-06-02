@@ -1,0 +1,23 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "Projeto-da-disciplina-de-sistemas-web-do-IFSP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deiveleal/ADS.git"
+  },
+  "author": "Deive",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deiveleal/ADS/issues"
+  },
+  "homepage": "https://github.com/deiveleal/ADS#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
