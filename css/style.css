@@ -302,3 +302,10 @@ li {
   margin: 0;
 }
 
+.fale-conosco{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+

@@ -9,4 +9,5 @@ appId: "1:618904456654:web:eba3abbd25623d8d57af9f"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-var db = firebase.firestore();
+const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true});
