@@ -32,3 +32,4 @@ function storeReg(categoria, titulo, resumo, texto, autor, data, fonte, imagem){
         alert("Erro ao registrar materia." + error)
     });
 }
+
