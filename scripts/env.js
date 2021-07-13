@@ -9,4 +9,4 @@ appId: "1:618904456654:web:eba3abbd25623d8d57af9f"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-let db = firebase.firestore();
+var db = firebase.firestore();
