@@ -12,7 +12,7 @@
   <script src="/scripts/env.js"></script>
   <script src="/scripts/news.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -23,207 +23,47 @@
 
 <body>
   <header>
+    <br><br>
     <h1 id="title">Diário de Dados</h1>
     <p id="sub-title">Centro de informações</p>
-    <hr id="bar_title" />
-    <br />
-    <nav aria-label="Site Menu">
-      <ul class="menu">
-        <li><a href="/index.html">Início</a></li>
-        <li><a href="pages/index-educacao.html">Educação</a></li>
-        <li><a href="pages/index-politica.html">Política</a></li>
-        <li><a href="pages/index-saude.html">Saúde</a></li>
-
-      </ul>
-    </nav>
-    <br />
-    <hr />
+    <hr class="col-md-8 offset-md-2" />
+    <div class="col-md-6 offset-md-3">
+      <nav aria-label="Site Menu">
+        <ul class="menu">
+          <li><a href="/index.html">Início</a></li>
+          <li><a href="/pages/index-educacao.html">Educação</a></li>
+          <li><a href="/pages/index-politica.html">Política</a></li>
+          <li><a href="/pages/index-saude.html">Saúde</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr class="col-md-4 offset-md-4" />
     <br />
   </header>
   <br />
 
-  <div id='teste'>
-
-  </div>
-
 
   <div class="card-deck">
-    <div class="card" id="card-edu-1"></div>
-    <div class="card" id="card-poli-1"> </div>
-    <div class="card" id="card-sau-1"></div>
-  </div>
-
-
-
-  <div class="content">
-
-    <!-- 
-    card  educacao
-    -->
-
-    <div class="card">
-      <div class="top-card">
-
-        <h2 class="section-news">Educação</h2>
-        <hr class="bar-card" />
-        <h3 class="section-news">Cortes no orçamento de universidades federais poderá afetar mais de 70 mil pesquisas
-        </h3>
-      </div>
-      <div class="medium-card image-educacao">
-
-      </div>
-      <div class="botton-card">
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-        </p>
-      </div>
-      <div class="actions-card">
-        <a href="pages/index-educacao.html">Visualizar notícia</a>
-      </div>
-
+    <div class="card rounded" id="card-edu-1">
+      <a href="pages/index-educacao.html" class="stretched-link"></a>
     </div>
-
-    <!-- 
-    card  politica
-    -->
-    <div class="card">
-      <div class="top-card">
-
-        <h2 class="section-news">Política</h2>
-        <hr class="bar-card" />
-        <h3 class="section-news">Aliados veem última chance de Bolsonaro afastar Salles após pedido de inquérito pela
-          PGR</h3>
-      </div>
-      <div class="medium-card image-politica">
-
-      </div>
-      <div class="botton-card">
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-        </p>
-      </div>
-      <div class="actions-card">
-        <a href="pages/index-politica.html">Visualizar notícia</a>
-      </div>
+    <div class="card rounded" id="card-poli-1">
+      <a href="pages/index-politica.html" class="stretched-link"></a>
     </div>
-    <!-- 
-    card  saude
-    -->
-    <div class="card">
-      <div class="top-card">
-
-        <h2 class="section-news">Saúde</h2>
-        <hr class="bar-card" />
-        <h3 class="section-news">Saúde vacina pessoas com deficiência grave que não possuem cadastro no BPC</h3>
-      </div>
-      <div class="medium-card image-saude">
-
-      </div>
-      <div class="botton-card">
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-        </p>
-      </div>
-      <div class="actions-card">
-        <a href="pages/index-saude.html">Visualizar notícia</a>
-      </div>
-    </div>
-
-  </div>
-
-
-  <!-- 
-    final dos cards
-    -->
-
-  <!--
-    seçao 2 de card
-  -->
-
-  <div class="content">
-    <div class="card">
-      <div class="top-card">
-
-        <h2 class="section-news">Educação</h2>
-        <hr class="bar-card" />
-        <h3 class="section-news">Cortes no orçamento de universidades federais poderá afetar mais de 70 mil pesquisas
-        </h3>
-      </div>
-      <div class="medium-card image-educacao">
-
-      </div>
-      <div class="botton-card">
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-        </p>
-      </div>
-      <div class="actions-card">
-        <a href="pages/index-educacao.html">Visualizar notícia</a>
-      </div>
-    </div>
-
-    <!-- 
-    card  politica
-    -->
-    <div class="card">
-      <div class="top-card">
-
-        <h2 class="section-news">Política</h2>
-        <hr class="bar-card" />
-        <h3 class="section-news">Aliados veem última chance de Bolsonaro afastar Salles após pedido de inquérito pela
-          PGR</h3>
-      </div>
-      <div class="medium-card image-politica">
-
-      </div>
-      <div class="botton-card">
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-        </p>
-      </div>
-      <div class="actions-card">
-        <a href="pages/index-politica.html">Visualizar notícia</a>
-      </div>
-    </div>
-    <!-- 
-    card  saude
-    -->
-    <div class="card">
-      <div class="top-card">
-
-        <h2 class="section-news">Saúde</h2>
-        <hr class="bar-card" />
-        <h3 class="section-news">Saúde vacina pessoas com deficiência grave que não possuem cadastro no BPC</h3>
-      </div>
-      <div class="medium-card image-saude">
-
-      </div>
-      <div class="botton-card">
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-        </p>
-      </div>
-      <div class="actions-card">
-        <a href="pages/index-saude.html">Visualizar notícia</a>
-      </div>
+    <div class="card rounded" id="card-sau-1">
+      <a href="pages/index-saude.html" class="stretched-link"></a>
     </div>
   </div>
+  <div>
+    <br>
+    <br>
+  </div>
 
-  <!--
-    seçao 2 de card - FIM
-  -->
+  <div class="card-deck">
+    <div class="card rounded" id="card-edu-2"></div>
+    <div class="card rounded" id="card-poli-2"> </div>
+    <div class="card rounded" id="card-sau-2"></div>
+  </div>
 
 
 
