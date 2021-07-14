@@ -102,25 +102,26 @@ function renderEduCard(id) {
 
 function renderEdu(doc) {
     let card = document.createElement('div');
+    card.classList.add('card');
 
     let cardHeader = document.createElement('div');
-    //card.classList.add('card');
-
+    cardHeader.classList.add('card-body');
     let category = document.createElement('h2');
     category.classList.add('card-header');
 
-    let separator = document.createElement('hr');
     let title = document.createElement('h3');
     title.classList.add('card-title');
 
     let divImg = document.createElement('div');
     let imgInput = document.createElement('img');
-    imgInput.src = doc.data().imagem
-    divImg.classList.add('img-fluid')
+    imgInput.src = doc.data().imagem;
+    imgInput.classList.add('card-img-top');
+    
 
     let divAbstract = document.createElement('div');
-    divAbstract.classList.add('card-footer')
+    divAbstract.classList.add('card-body')
     let abstractP = document.createElement('p');
+    abstractP.classList.add('card-text');
     abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
@@ -128,7 +129,6 @@ function renderEdu(doc) {
     title.textContent = doc.data().titulo;
 
     cardHeader.appendChild(category);
-    cardHeader.appendChild(separator);
     cardHeader.appendChild(title);
 
     divImg.appendChild(imgInput);
@@ -157,25 +157,26 @@ function renderEdu(doc) {
 
 function renderPoli(doc) {
     let card = document.createElement('div');
+    card.classList.add('card');
 
     let cardHeader = document.createElement('div');
-    //card.classList.add('card');
-
+    cardHeader.classList.add('card-body');
     let category = document.createElement('h2');
     category.classList.add('card-header');
 
-    let separator = document.createElement('hr');
+    
     let title = document.createElement('h3');
     title.classList.add('card-title');
 
     let divImg = document.createElement('div');
     let imgInput = document.createElement('img');
-    imgInput.src = doc.data().imagem
-    divImg.classList.add('img-fluid')
+    imgInput.src = doc.data().imagem;
+    imgInput.classList.add('card-img-top');
 
     let divAbstract = document.createElement('div');
-    divAbstract.classList.add('card-footer')
+    divAbstract.classList.add('card-body')
     let abstractP = document.createElement('p');
+    abstractP.classList.add('card-text');
     abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
@@ -183,7 +184,7 @@ function renderPoli(doc) {
     title.textContent = doc.data().titulo;
 
     cardHeader.appendChild(category);
-    cardHeader.appendChild(separator);
+    
     cardHeader.appendChild(title);
 
     divImg.appendChild(imgInput);
@@ -202,25 +203,25 @@ function renderPoli(doc) {
 
 function renderSau(doc) {
     let card = document.createElement('div');
+    card.classList.add('card');
 
     let cardHeader = document.createElement('div');
-    //card.classList.add('card');
-
+    cardHeader.classList.add('card-body');
     let category = document.createElement('h2');
     category.classList.add('card-header');
 
-    let separator = document.createElement('hr');
     let title = document.createElement('h3');
     title.classList.add('card-title');
 
     let divImg = document.createElement('div');
     let imgInput = document.createElement('img');
-    imgInput.src = doc.data().imagem
-    divImg.classList.add('img-fluid')
+    imgInput.src = doc.data().imagem;
+    imgInput.classList.add('card-img-top');
 
     let divAbstract = document.createElement('div');
-    divAbstract.classList.add('card-footer')
+    divAbstract.classList.add('card-body')
     let abstractP = document.createElement('p');
+    abstractP.classList.add('card-text');
     abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
@@ -228,7 +229,6 @@ function renderSau(doc) {
     title.textContent = doc.data().titulo;
 
     cardHeader.appendChild(category);
-    cardHeader.appendChild(separator);
     cardHeader.appendChild(title);
 
     divImg.appendChild(imgInput);

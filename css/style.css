@@ -309,3 +309,6 @@ li {
   height: 100px;
 }
 
+.card-deck{
+  display: table;
+}
