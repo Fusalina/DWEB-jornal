@@ -25,54 +25,35 @@ $(document).ready(function () {
         querySnapshot.docs.forEach(doc => {
             console.log(doc.id)
             listaIdNoticiasEducacao.push(doc.id);
-
-            if (listaIdNoticiasEducacao.length > 0) {
-                console.log(listaIdNoticiasEducacao);
-
-                console.log(randIdEduc());
-                renderEduCard(randIdEduc());
-            }
+        });
+        let idRandomE = randIdEduc();
+        console.log('id random: ' + idRandomE);
+        db.collection("educacao").doc(idRandomE).get().then((data) => {
+            renderEdu(data);
         });
     });
     db.collection("politica").get().then((querySnapshot) => {
         querySnapshot.docs.forEach(doc => {
             listaIdNoticiasPolitica.push(doc.id);
-
-            if (listaIdNoticiasPolitica.length > 0) {
-                console.log(listaIdNoticiasPolitica);
-
-                console.log('teste random:')
-                console.log(randIdPolit());
-            }
+        });
+        let idRandomP = randIdPolit();
+        console.log('id random: ' + idRandomP);
+        db.collection("politica").doc(idRandomP).get().then((data) => {
+            renderPoli(data);
         });
     });
     db.collection("saude").get().then((querySnapshot) => {
         querySnapshot.docs.forEach(doc => {
             listaIdNoticiasSaude.push(doc.id);
-
-            if (listaIdNoticiasSaude.length > 0) {
-                console.log(listaIdNoticiasSaude);
-
-                console.log(listaIdNoticiasSaude);
-            }
+        });
+        let idRandomS = randIdSaude();
+        console.log('id random: ' + idRandomS);
+        db.collection("saude").doc(idRandomS).get().then((data) => {
+            renderSau(data);
         });
     });
 
-
-    //console.log(listaIdNoticiasEducacao.length)
-    /*
-    console.log(randCat());
-    
-    
-    console.log(randIdPolit());
-    console.log(listaIdNoticiasPolitica);
-    console.log(randIdSaude());
-    console.log(listaIdNoticiasSaude);
-    */
 });
-
-
-
 
 
 
@@ -93,9 +74,13 @@ function randIdSaude() {
     return listaIdNoticiasSaude[Math.floor(Math.random() * listaIdNoticiasSaude.length)];
 };
 
-
+/*
 function renderEduCard(id) {
-    let randomEduNews = db.collection('educacao').doc(id).data();
+    console.log(randIdEduc())
+    console.log('TESTE DB: !!!!')
+    //console.log(db.collection('educacao').doc(id));
+
+    let randomEduNews = db.collection('educacao').db.collection('educacao').doc().get();
 
     let card = document.createElement('div');
     let category = document.createElement('h2');
@@ -111,21 +96,54 @@ function renderEduCard(id) {
     document.getElementById("card-edu-1").appendChild(card);
 
 }
+*/
+
 
 
 function renderEdu(doc) {
     let card = document.createElement('div');
+
+    let cardHeader = document.createElement('div');
+    //card.classList.add('card');
+
+    let category = document.createElement('h2');
+    category.classList.add('card-header');
+
+    let separator = document.createElement('hr');
     let title = document.createElement('h3');
+    title.classList.add('card-title');
+
+    let divImg = document.createElement('div');
+    let imgInput = document.createElement('img');
+    imgInput.src = doc.data().imagem
+    divImg.classList.add('img-fluid')
+
+    let divAbstract = document.createElement('div');
+    divAbstract.classList.add('card-footer')
+    let abstractP = document.createElement('p');
+    abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
+    category.textContent = 'Educação';
     title.textContent = doc.data().titulo;
 
-    card.appendChild(title);
+    cardHeader.appendChild(category);
+    cardHeader.appendChild(separator);
+    cardHeader.appendChild(title);
 
+    divImg.appendChild(imgInput);
+
+    divAbstract.appendChild(abstractP);
+
+    card.appendChild(cardHeader);
+    card.appendChild(divImg);
+    card.appendChild(divAbstract);
+
+    //card-footer
 
     document.getElementById("card-edu-1").appendChild(card);
-    console.log('O QUE É O DOC:')
-    console.log(doc)
+    //console.log('O QUE É O DOC:')
+    //console.log(doc)
 
 
     /*
@@ -137,13 +155,91 @@ function renderEdu(doc) {
      */
 }
 
-db.collection('educacao').get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-        //console.log(doc.data())
-        //console.log(doc.data().titulo)
-        //let titulo = doc.data().titulo
-        //renderEdu(doc);
-    })
-    
-})
+function renderPoli(doc) {
+    let card = document.createElement('div');
 
+    let cardHeader = document.createElement('div');
+    //card.classList.add('card');
+
+    let category = document.createElement('h2');
+    category.classList.add('card-header');
+
+    let separator = document.createElement('hr');
+    let title = document.createElement('h3');
+    title.classList.add('card-title');
+
+    let divImg = document.createElement('div');
+    let imgInput = document.createElement('img');
+    imgInput.src = doc.data().imagem
+    divImg.classList.add('img-fluid')
+
+    let divAbstract = document.createElement('div');
+    divAbstract.classList.add('card-footer')
+    let abstractP = document.createElement('p');
+    abstractP.textContent = doc.data().resumo;
+
+    card.setAttribute('data-id', doc.id);
+    category.textContent = 'Política';
+    title.textContent = doc.data().titulo;
+
+    cardHeader.appendChild(category);
+    cardHeader.appendChild(separator);
+    cardHeader.appendChild(title);
+
+    divImg.appendChild(imgInput);
+
+    divAbstract.appendChild(abstractP);
+
+    card.appendChild(cardHeader);
+    card.appendChild(divImg);
+    card.appendChild(divAbstract);
+
+
+    document.getElementById("card-poli-1").appendChild(card);
+    
+}
+
+
+function renderSau(doc) {
+    let card = document.createElement('div');
+
+    let cardHeader = document.createElement('div');
+    //card.classList.add('card');
+
+    let category = document.createElement('h2');
+    category.classList.add('card-header');
+
+    let separator = document.createElement('hr');
+    let title = document.createElement('h3');
+    title.classList.add('card-title');
+
+    let divImg = document.createElement('div');
+    let imgInput = document.createElement('img');
+    imgInput.src = doc.data().imagem
+    divImg.classList.add('img-fluid')
+
+    let divAbstract = document.createElement('div');
+    divAbstract.classList.add('card-footer')
+    let abstractP = document.createElement('p');
+    abstractP.textContent = doc.data().resumo;
+
+    card.setAttribute('data-id', doc.id);
+    category.textContent = 'Saúde';
+    title.textContent = doc.data().titulo;
+
+    cardHeader.appendChild(category);
+    cardHeader.appendChild(separator);
+    cardHeader.appendChild(title);
+
+    divImg.appendChild(imgInput);
+
+    divAbstract.appendChild(abstractP);
+
+    card.appendChild(cardHeader);
+    card.appendChild(divImg);
+    card.appendChild(divAbstract);
+
+
+    document.getElementById("card-sau-1").appendChild(card);
+    
+}
