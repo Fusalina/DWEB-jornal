@@ -45,4 +45,16 @@ $(document).ready(function(){
     }
 });
 
-
+$(document).ready(function () {
+    $('#titulo').on('input change', function () {
+        if ($(this).val().length == 0) {
+            alert('O titulo não é opcional!');
+        }
+        else if ($(this).val().length > 50) {
+            alert('O titulo não é opcional!');
+        }
+        else {
+            console.log('titulo valido')
+        }
+    });
+});
