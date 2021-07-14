@@ -124,11 +124,16 @@ function renderEdu(doc) {
 
     let cardHeader = document.createElement('div');
     cardHeader.classList.add('card-body');
-    let category = document.createElement('h2');
+    let category = document.createElement('h5');
     category.classList.add('card-header');
+    category.classList.add('text-secondary');
+
+    
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
+    title.classList.add('card-body');
+
 
     let divImg = document.createElement('div');
     let imgInput = document.createElement('img');
@@ -140,6 +145,7 @@ function renderEdu(doc) {
     divAbstract.classList.add('card-body')
     let abstractP = document.createElement('p');
     abstractP.classList.add('card-text');
+    abstractP.classList.add('card-body');
     abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
@@ -179,12 +185,16 @@ function renderPoli(doc) {
 
     let cardHeader = document.createElement('div');
     cardHeader.classList.add('card-body');
-    let category = document.createElement('h2');
+    let category = document.createElement('h5');
     category.classList.add('card-header');
+    category.classList.add('text-secondary');
 
     
+
     let title = document.createElement('h3');
     title.classList.add('card-title');
+    title.classList.add('card-body');
+
 
     let divImg = document.createElement('div');
     let imgInput = document.createElement('img');
@@ -195,6 +205,7 @@ function renderPoli(doc) {
     divAbstract.classList.add('card-body')
     let abstractP = document.createElement('p');
     abstractP.classList.add('card-text');
+    abstractP.classList.add('card-body');
     abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
@@ -225,11 +236,16 @@ function renderSau(doc) {
 
     let cardHeader = document.createElement('div');
     cardHeader.classList.add('card-body');
-    let category = document.createElement('h2');
+    let category = document.createElement('h5');
     category.classList.add('card-header');
+    category.classList.add('text-secondary');
+
+    
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
+    title.classList.add('card-body');
+
 
     let divImg = document.createElement('div');
     let imgInput = document.createElement('img');
@@ -240,6 +256,7 @@ function renderSau(doc) {
     divAbstract.classList.add('card-body')
     let abstractP = document.createElement('p');
     abstractP.classList.add('card-text');
+    abstractP.classList.add('card-body');
     abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
@@ -270,11 +287,16 @@ function renderEdu2(doc) {
 
     let cardHeader = document.createElement('div');
     cardHeader.classList.add('card-body');
-    let category = document.createElement('h2');
+    let category = document.createElement('h5');
     category.classList.add('card-header');
+    category.classList.add('text-secondary');
+
+    
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
+    title.classList.add('card-body');
+
 
     let divImg = document.createElement('div');
     let imgInput = document.createElement('img');
@@ -286,6 +308,7 @@ function renderEdu2(doc) {
     divAbstract.classList.add('card-body')
     let abstractP = document.createElement('p');
     abstractP.classList.add('card-text');
+    abstractP.classList.add('card-body');
     abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
@@ -325,12 +348,16 @@ function renderPoli2(doc) {
 
     let cardHeader = document.createElement('div');
     cardHeader.classList.add('card-body');
-    let category = document.createElement('h2');
+    let category = document.createElement('h5');
     category.classList.add('card-header');
+    category.classList.add('text-secondary');
 
     
+
     let title = document.createElement('h3');
     title.classList.add('card-title');
+    title.classList.add('card-body');
+
 
     let divImg = document.createElement('div');
     let imgInput = document.createElement('img');
@@ -341,6 +368,7 @@ function renderPoli2(doc) {
     divAbstract.classList.add('card-body')
     let abstractP = document.createElement('p');
     abstractP.classList.add('card-text');
+    abstractP.classList.add('card-body');
     abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
@@ -371,11 +399,15 @@ function renderSau2(doc) {
 
     let cardHeader = document.createElement('div');
     cardHeader.classList.add('card-body');
-    let category = document.createElement('h2');
+    let category = document.createElement('h5');
     category.classList.add('card-header');
+    category.classList.add('text-secondary');
+
+    
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
+    title.classList.add('card-body');
 
     let divImg = document.createElement('div');
     let imgInput = document.createElement('img');
@@ -386,6 +418,7 @@ function renderSau2(doc) {
     divAbstract.classList.add('card-body')
     let abstractP = document.createElement('p');
     abstractP.classList.add('card-text');
+    abstractP.classList.add('card-body');
     abstractP.textContent = doc.data().resumo;
 
     card.setAttribute('data-id', doc.id);
