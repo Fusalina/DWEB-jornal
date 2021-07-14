@@ -7,7 +7,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="http://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
   <script src="/scripts/env.js"></script>
   <script src="/scripts/faleconosco.js"></script>
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
@@ -15,64 +16,70 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   <title>Diário de Dados</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <title>Diário de Dados - Fale Conosco</title>
 </head>
 
 <body>
   <header>
-      <br><br>
+    <br><br>
     <h1 id="title">Diário de Dados</h1>
     <p id="sub-title">Centro de informações</p>
-    <hr class="col-md-8 offset-md-2"/>
+    <hr class="col-md-8 offset-md-2" />
     <div class="col-md-6 offset-md-3">
-        <nav aria-label="Site Menu">
-            <ul class="menu">
-                <li><a href="/index.html">Início</a></li>
-                <li><a href="/pages/index-educacao.html">Educação</a></li>
-                <li><a href="/pages/index-politica.html">Política</a></li>
-                <li><a href="/pages/index-saude.html">Saúde</a></li>
-            </ul>
-        </nav>
+      <nav aria-label="Site Menu">
+        <ul class="menu">
+          <li><a href="/index.html">Início</a></li>
+          <li><a href="/pages/index-educacao.html">Educação</a></li>
+          <li><a href="/pages/index-politica.html">Política</a></li>
+          <li><a href="/pages/index-saude.html">Saúde</a></li>
+        </ul>
+      </nav>
     </div>
-    <hr class="col-md-4 offset-md-4"/>
+    <hr class="col-md-4 offset-md-4" />
     <br />
   </header>
   <br />
   <div class="col-md-6 offset-md-3">
     <h2>Fale Conosco</h2>
     <form>
-        <div class="form-group">
-            <label>Digite seu nome</label>
-            <input id="nome" type="text" class="form-control">
-          </div>
-          <br>
-        <div class="form-group">
-          <label>E-mail</label>
-          <input id="email" type="email" class="form-control" placeholder="nome@exemplo.com">
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">O que deseja nos falar?</label>
-          <textarea id="texto_area" class="form-control" rows="3"></textarea>
-        </div>
-        <br>
-        <div>
-            <button id="btn_enviar" type="button" class="btn btn-secondary">Enviar</button>
-        </div>
-      </form>
+      <div class="form-group">
+        <label>Digite seu nome</label>
+        <input id="nome" type="text" class="form-control">
+      </div>
+      <br>
+      <div class="form-group">
+        <label>E-mail</label>
+        <input id="email" type="email" class="form-control" placeholder="nome@exemplo.com">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">O que deseja nos falar?</label>
+        <textarea id="texto_area" class="form-control" rows="3"></textarea>
+      </div>
+      <br>
+      <div class="col text-center">
+        <button id="btn_enviar" type="button" class="btn btn-secondary">Enviar</button>
+      </div>
+    </form>
   </div>
   <br>
-<footer id="rodape">
-    <div class="col-md-6 offset-md-3">
-        <hr class="col-md-6 offset-md-3"/>
+  <div>
+    <footer id="rodape">
+      <div class="col-md-6 offset-md-3">
+        <hr class="col-md-6 offset-md-3" />
         <div class="footer-line">
           <p>Desenvolvido por Carolina Zanotto e Deive Leal</p>
           <p>Copyright © 2021</p>
           <p>Todos os direitos reservados</p>
         </div>
-        <hr class="col-md-6 offset-md-3"/>
-    </div>
-</footer>
+        <hr class="col-md-6 offset-md-3" />
+      </div>
+      <div class="fale-conosco">
+        <a href="/pages/index-fale-conosco.html"><img src="/images/fale_conosco_cinza.png" width="201p"></a>
+      </div>
+    </footer>
+  </div>
 
 </body>
 
