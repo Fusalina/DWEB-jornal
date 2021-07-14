@@ -13,7 +13,24 @@ const listarFrases = (event)=>{
         });
     });
 }
+
+const NamedStruct = (name, ...keys) => ((...v) => keys.reduce((o, k, i) => {o[k] = v[i]; return o} , {_name: name}))
+const Item = NamedStruct('Item', 'id', 'speaker', 'country')
+var myItems = [
+    Item(1, 'john', 'au'),
+    Item(2, 'mary', 'us')
+];
+
+console.log(myItems);
+console.log(myItems[0].id);
+console.log(myItems[0].speaker);
+console.log(myItems[0].country);
 */
+
+//tentativa de estrutura de noticias
+const NewsStruct = (name, ...keys) => ((...v) => keys.reduce((o, k, i) => { o[k] = v[i]; return o }, { _name: name }))
+const ItemNews = NewsStruct('ItemNews', 'id', 'autor', 'data', 'fonte', 'imagem', 'resumo', 'texto', 'titulo')
+var myItemsItemNewsEdu = [];
 
 var listaIdNoticiasEducacao = [];
 var listaIdNoticiasPolitica = [];
@@ -25,11 +42,21 @@ $(document).ready(function () {
         querySnapshot.docs.forEach(doc => {
             console.log(doc.id)
             listaIdNoticiasEducacao.push(doc.id);
+            myItemsItemNewsEdu.push(ItemNews(doc.id, doc.data().autor,
+                doc.data().data,
+                doc.data().fonte,
+                doc.data().imagem,
+                doc.data().resumo,
+                doc.data().texto,
+                doc.data().titulo));
+
         });
+        console.log(myItemsItemNewsEdu);
         let idRandomE = randIdEduc();
         console.log('id random: ' + idRandomE);
         db.collection("educacao").doc(idRandomE).get().then((data) => {
             renderEdu(data);
+            //renderEduSelected(data)
         });
 
         let idRandomE2 = randIdEduc();
@@ -128,7 +155,7 @@ function renderEdu(doc) {
     category.classList.add('card-header');
     category.classList.add('text-secondary');
 
-    
+
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
@@ -139,7 +166,7 @@ function renderEdu(doc) {
     let imgInput = document.createElement('img');
     imgInput.src = doc.data().imagem;
     imgInput.classList.add('card-img-top');
-    
+
 
     let divAbstract = document.createElement('div');
     divAbstract.classList.add('card-body')
@@ -189,7 +216,7 @@ function renderPoli(doc) {
     category.classList.add('card-header');
     category.classList.add('text-secondary');
 
-    
+
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
@@ -213,7 +240,7 @@ function renderPoli(doc) {
     title.textContent = doc.data().titulo;
 
     cardHeader.appendChild(category);
-    
+
     cardHeader.appendChild(title);
 
     divImg.appendChild(imgInput);
@@ -226,7 +253,7 @@ function renderPoli(doc) {
 
 
     document.getElementById("card-poli-1").appendChild(card);
-    
+
 }
 
 
@@ -240,7 +267,7 @@ function renderSau(doc) {
     category.classList.add('card-header');
     category.classList.add('text-secondary');
 
-    
+
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
@@ -276,7 +303,7 @@ function renderSau(doc) {
 
 
     document.getElementById("card-sau-1").appendChild(card);
-    
+
 }
 
 //second row
@@ -291,7 +318,7 @@ function renderEdu2(doc) {
     category.classList.add('card-header');
     category.classList.add('text-secondary');
 
-    
+
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
@@ -302,7 +329,7 @@ function renderEdu2(doc) {
     let imgInput = document.createElement('img');
     imgInput.src = doc.data().imagem;
     imgInput.classList.add('card-img-top');
-    
+
 
     let divAbstract = document.createElement('div');
     divAbstract.classList.add('card-body')
@@ -352,7 +379,7 @@ function renderPoli2(doc) {
     category.classList.add('card-header');
     category.classList.add('text-secondary');
 
-    
+
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
@@ -376,7 +403,7 @@ function renderPoli2(doc) {
     title.textContent = doc.data().titulo;
 
     cardHeader.appendChild(category);
-    
+
     cardHeader.appendChild(title);
 
     divImg.appendChild(imgInput);
@@ -389,7 +416,7 @@ function renderPoli2(doc) {
 
 
     document.getElementById("card-poli-2").appendChild(card);
-    
+
 }
 
 
@@ -403,7 +430,7 @@ function renderSau2(doc) {
     category.classList.add('card-header');
     category.classList.add('text-secondary');
 
-    
+
 
     let title = document.createElement('h3');
     title.classList.add('card-title');
@@ -438,5 +465,86 @@ function renderSau2(doc) {
 
 
     document.getElementById("card-sau-2").appendChild(card);
-    
+
 }
+
+//var cardSelected = "";
+
+//Trigger 
+/*
+$('card').click(function () {
+    
+    //var favoritemovie = "Shrek";
+    //sessionStorage.setItem("favoriteMovie", favoritemovie);
+    //Javascript in Page 2:
+    
+    //var favoritemovie = sessionStorage.getItem("favoriteMovie");
+    //console.log(favoritemovie);
+    //Prints this result in the console:
+    //Shrek
+    
+
+    
+    cardSelected = $(this).data('data-id');
+    sessionStorage.setItem("cardSelected", cardSelected);
+
+    //console.log($(this).data('data-id'));
+    //alert($(this).data('data-id'));
+
+});
+*/
+
+/*
+function renderEduSelected(){
+    //var favoritemovie = sessionStorage.getItem("favoriteMovie");
+    //console.log(favoritemovie);
+
+    let card = document.createElement('div');
+    card.classList.add('card');
+
+    let cardHeader = document.createElement('div');
+    cardHeader.classList.add('card-body');
+    let category = document.createElement('h5');
+    category.classList.add('card-header');
+    category.classList.add('text-secondary');
+
+
+
+    let title = document.createElement('h3');
+    title.classList.add('card-title');
+    title.classList.add('card-body');
+
+
+    let divImg = document.createElement('div');
+    let imgInput = document.createElement('img');
+    imgInput.src = doc.data().imagem;
+    imgInput.classList.add('card-img-top');
+
+
+    let divAbstract = document.createElement('div');
+    divAbstract.classList.add('card-body')
+    let abstractP = document.createElement('p');
+    abstractP.classList.add('card-text');
+    abstractP.classList.add('card-body');
+    abstractP.textContent = doc.data().resumo;
+
+    card.setAttribute('data-id', doc.id);
+    category.textContent = 'Educação';
+    title.textContent = doc.data().titulo;
+
+    cardHeader.appendChild(category);
+    cardHeader.appendChild(title);
+
+    divImg.appendChild(imgInput);
+
+    divAbstract.appendChild(abstractP);
+
+    card.appendChild(cardHeader);
+    card.appendChild(divImg);
+    card.appendChild(divAbstract);
+
+    //card-footer
+
+    document.getElementById("card-edu-selected").appendChild(card);
+}
+*/

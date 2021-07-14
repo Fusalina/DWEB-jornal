@@ -205,12 +205,17 @@ li {
   justify-content: center;
 }
 
-#rodape, small {
+.rodape {
   position: static;
   bottom: 0;
   width: 100%;
   text-align: left;
 }
+
+small{
+  text-align: center;
+}
+
 #sec_dir {
   display: flex;
   align-items: flex-start;
@@ -244,5 +249,6 @@ li {
 
 .card-deck{
   display: table;
+  margin: 20px;
 }
 

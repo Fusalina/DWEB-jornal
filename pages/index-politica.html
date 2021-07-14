@@ -7,7 +7,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="http://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
   <script src="/scripts/env.js"></script>
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -15,7 +16,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/style.css" />
-  <title>Diário de Dados - Política</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>Diário de Dados - Educação</title>
 </head>
 
 <body>
@@ -25,110 +33,107 @@
       <br><br>
       <h1 id="title">Diário de Dados</h1>
       <p id="sub-title">Centro de informações</p>
-      <hr id="bar_title" />
-      <br />
-      <nav aria-label="Site Menu">
-        <ul class="menu">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="index-educacao.html">Educação</a></li>
-          <li><a href="index-politica.html">Política</a></li>
-          <li><a href="index-saude.html">Saúde</a></li>
-        </ul>
-      </nav>
-      <br />
-      <hr />
+      <hr class="col-md-8 offset-md-2" />
+      <div class="col-md-6 offset-md-3">
+        <nav aria-label="Site Menu">
+          <ul class="menu">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="index-educacao.html">Educação</a></li>
+            <li><a href="index-politica.html">Política</a></li>
+            <li><a href="index-saude.html">Saúde</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr class="col-md-4 offset-md-4" />
       <br />
     </header>
   </div>
   <br />
 
-  <div class="content-main">
+
+  <div class="card w-75 mx-auto" id="card-edu-selected">
+    <div class="card-body">
+      <h3 class="card-title card-body">CPI e Brasil real reforçam figurinhas repetidas no álbum da política do país</h3>
+      <h8 class="card-body">Flávia Tavares</h8><br>
+      <h16 class="card-body text-muted">04/05/2021</h16>
+    </div>
+    <div class="card-img-top">
+      <img class="card-img-top"
+        src="https://medias.cnnbrasil.com.br/empresario-carlos-wizard-depoe-a-cpi.jpeg?format=WEBP&image=https://mediastorage.cnnbrasil.com.br/IMAGES/00/00/04/43915_6DEE8EA2C339BC05.jpg&width=804&height=452&resize=CROP"
+        alt="Pessoas trans na escola">
+    </div>
+    <div class="card-body">
+      <p class="card-text card-body">
+        O Brasil acha que é muito "Black Mirror", mas é puro "O Bem Amado", de Dias Gomes. E também é Machado de Assis, Euclides da Cunha, Nelson Rodrigues. Somente nos últimos dias, os acontecimentos da arena política envolveram um servidor público honesto, um (provável) jagunço assassinado, uma (possível) ex-mulher delatora, um empresário suspeito e um super pedido de impeachment assinado por juristas e políticos de variadas origens e gerações. O país se traduz num frequente retorno a alguns estereótipos que habitam nosso imaginário e nossa história. “Essas figuras são funções permanentes num certo enquadramento da vida política brasileira e as biografias vão preenchendo esses papéis. São lugares regularmente ocupados por novos ocupantes”, explica o cientista político Renato Lessa, professor de filosofia política da PUC-Rio. E assim, no santo ano de 2021, uma pandemia e uma CPI a mais na linha do tempo, estamos às voltas com uma espécie de déjà vu permanente, sendo revisitados por personagens que moldam as instituições e o país.
+      </p>
+      <p class="card-text card-body text-muted">
+        https://www.cnnbrasil.com.br/politica/2021/07/04/album-brasil-as-figuras-que-se-repetem-na-arena-politica-do-pais
+      </p>
+    </div>
+  </div>
+
+  <div class="card-deck w-75 mx-auto">
     <div class="card">
-      <div class="top-card">
-
-        <h2 class="section-news">Política</h2>
-        <hr class="bar-card" />
-        <div class="author">
-          <h6 class="section-news">Reportagem por: XXXXXX</h6>
-          <h6 class="section-news">Data: XX / XX / XX</h6>
-        </div>
-
-        <hr class="bar-card" />
-        <h3 class="section-news">Aliados veem última chance de Bolsonaro afastar Salles após pedido de inquérito pela
-          PGR
-        </h3>
+      <div class="card-body">
+        <h3 class="card-title card-body">Aliados de Bolsonaro pedem 'ajustes' e dizem não querer 'afundar junto' com o governo</h3>
+        <h8 class="card-body">Membros da base bolsonarista avaliam que a pesquisa passou uma série de recados ao governo: o presidente precisa mudar não só a administração, mas também o comportamento pessoal se quiser recuperar a própria imagem e se tornar competitivo em 2022.</h8>
+        <br>
       </div>
-      <div class="medium-card-main image-politica">
-
+      <div class="card-img-bottom">
+        <img class="card-img-bottom"
+          src="https://ogimg.infoglobo.com.br/in/24882968-69a-c07/FT1500A/690/header-aliados_bolsonaro.jpg"
+          alt="Imagem com varios aliados do Bolsonaro">
       </div>
-      <div class="botton-card">
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-          id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-          nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-          tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-          ante ipsum primis in faucibus orci luctus et ultrices posuere
-          cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-          Nullam in ligula magna.
-        </p>
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-          id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-          nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-          tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-          ante ipsum primis in faucibus orci luctus et ultrices posuere
-          cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-          Nullam in ligula magna.
-        </p>
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-          id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-          nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-          tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-          ante ipsum primis in faucibus orci luctus et ultrices posuere
-          cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-          Nullam in ligula magna.
-        </p>
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-          id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-          nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-          tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-          ante ipsum primis in faucibus orci luctus et ultrices posuere
-          cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-          Nullam in ligula magna.
-        </p>
-      </div>
+    </div>
 
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title card-body">Risco de golpe cresceu na América Latina, mas militares brasileiros preferem 'bastidores', diz professor de Harvard</h3>
+        <h8 class="card-body">Em Como as Democracias Morrem, o cientista político e professor da Universidade de Harvard Steven Levitsky e o colega Daniel Ziblatt escreveram que golpes militares "clássicos" como os vistos na América Latina nos anos 1960 e 1970 eram cada vez mais raros.</h8><br>
+      </div>
+      <div class="card-img-bottom">
+        <img class="card-img-bottom"
+          src="https://ichef.bbci.co.uk/news/800/cpsprodpb/AB2B/production/_119391834_0cb8975c-a39b-4b0e-8566-5db83561cb9e.jpg"
+          alt="Bolsonaro cercado por militares">
+      </div>
+    </div>
+
+
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title card-body">Os motivos por trás dos apelos pela volta do horário de verão</h3>
+        <h8 class="card-body">Geralmente em sintonia com Jair Bolsonaro (sem partido), o empresário Luciano Hang passou recentemente a discordar do presidente da República em um ponto. O dono das lojas Havan aderiu ao movimento de empresários que pedem a volta do horário de verão, extinto por Bolsonaro em abril de 2019.</h8><br>
+      </div>
+      <div class="card-img-bottom">
+        <img class="card-img-bottom"
+          src="https://ichef.bbci.co.uk/news/800/cpsprodpb/1575E/production/_119320978_1bicicleta.jpg"
+          alt="Garota andando de bicicleta ao por do sol">
+      </div>
     </div>
   </div>
 
 
-<br />
-<div>
-  <footer id="rodape">
-      <div class="col-md-6 offset-md-3">
-          <hr class="col-md-6 offset-md-3" />
-          <div class="footer-line">
-              <p>Desenvolvido por Carolina Zanotto e Deive Leal</p>
-              <p>Copyright © 2021</p>
-              <p>Todos os direitos reservados</p>
-          </div>
-          <hr class="col-md-6 offset-md-3" />
-      </div>
-      <div class="fale-conosco">
-        <a href="/pages/index-fale-conosco.html"><img src="/images/fale_conosco_cinza.png" width="201p"></a>
-        <a href="/pages/auth.html"><img src="/images/Login.png" width="52"></a>
-      </div>
+  <footer class="rodape">
+    <hr />
+    <div class="footer-line">
+      <p>Desenvolvido por Carolina Zanotto e Deive Leal</p>
+      <p class="text-muted">Copyright © 2021</p>
+      <p class="text-muted">Todos os direitos reservados</p>
+    </div>
+
+    <hr />
+    <div class="col text-center">
+      <a href="/pages/index-fale-conosco.html"><img src="../images/fale_conosco_cinza.png" width="201p"></a>
+    </div>
+
+    <hr />
+    <div class="col text-center">
+      <a href="/pages/auth.html"><img src="../images/Login.png" width="201p"></a>
+    </div>
+    <hr class="col-md-8 offset-md-2" />
+
   </footer>
-</div>
+</body>
 
 </html>

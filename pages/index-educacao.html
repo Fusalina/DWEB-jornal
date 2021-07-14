@@ -7,7 +7,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="http://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
   <script src="/scripts/env.js"></script>
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -15,6 +16,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <title>Diário de Dados - Educação</title>
 </head>
 
@@ -25,103 +33,113 @@
       <br><br>
       <h1 id="title">Diário de Dados</h1>
       <p id="sub-title">Centro de informações</p>
-      <hr id="bar_title" />
-      <br />
-      <nav aria-label="Site Menu">
-        <ul class="menu">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="index-educacao.html">Educação</a></li>
-          <li><a href="index-politica.html">Política</a></li>
-          <li><a href="index-saude.html">Saúde</a></li>
-        </ul>
-      </nav>
-      <br />
-      <hr />
+      <hr class="col-md-8 offset-md-2" />
+      <div class="col-md-6 offset-md-3">
+        <nav aria-label="Site Menu">
+          <ul class="menu">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="index-educacao.html">Educação</a></li>
+            <li><a href="index-politica.html">Política</a></li>
+            <li><a href="index-saude.html">Saúde</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr class="col-md-4 offset-md-4" />
       <br />
     </header>
   </div>
   <br />
 
-  <div class="content-main">
+  
+  <div class="card w-75 mx-auto" id="card-edu-selected">
+    <div class="card-body">
+      <h3 class="card-title card-body">Paquistão abre escola pública para pessoas trans</h3>
+      <h8 class="card-body">France Presse</h8><br>
+      <h16 class="card-body text-muted">09/07/2021</h16>
+    </div>
+    <div class="card-img-top">
+      <img class="card-img-top"
+        src="https://s2.glbimg.com/QoAHYXvzN-Qi30gYp3qqJYwWDCc=/0x0:5472x3648/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/B/R/cRKrjMSbC2GMjkUaKA2g/000-9eg48k.jpg"
+        alt="Pessoas trans na escola">
+    </div>
+    <div class="card-body">
+      <p class="card-text card-body">
+        O Paquistão abriu sua primeira escola com fundos públicos para mulheres transexuais, que muitas vezes são
+        condenadas ao esquecimento em instituições de ensino.As mulheres trans são consideradas um terceiro gênero no
+        sudeste da Ásia e sua comunidade existe há centenas de anos no Paquistão, onde são conhecidas como "Khawaja
+        Sira".Muitas dessas pessoas são rejeitadas por suas famílias ou pela sociedade e precisam ganhar a vida como
+        dançarinas, morando nas ruas ou como trabalhadoras do sexo.Murad Raas, ministro da Educação da província de
+        Punjab, onde está localizada a escola, prometeu oferecer "educação para todos" ao anunciar a inauguração da
+        escola nesta semana na cidade de Multán. O centro, cujos professores também serão trans, oferece aulas à tarde e
+        qualificação profissional.
+      </p>
+      <p class="card-text card-body text-muted">
+        https://g1.globo.com/mundo/noticia/2021/07/09/paquistao-abre-escola-publica-para-pessoas-trans.ghtml
+      </p>
+    </div>
+  </div>
+  
+  <div class="card-deck w-75 mx-auto">
     <div class="card">
-      <div class="top-card">
-
-        <h2 class="section-news">Educação</h2>
-        <hr class="bar-card" />
-        <div class="author">
-          <h6 class="section-news">Reportagem por: XXXXXX</h6>
-          <h6 class="section-news">Data: XX / XX / XX</h6>
-        </div>
-
-        <hr class="bar-card" />
-        <h3 class="section-news">Cortes no orçamento de universidades federais poderá afetar mais de 70 mil pesquisas
-        </h3>
+      <div class="card-body">
+        <h3 class="card-title card-body">Câmara aprova inclusão da educação bilíngue de surdos na LDB</h3>
+        <h8 class="card-body">A Câmara dos Deputados aprovou nesta terça-feira (13) projeto de lei que define a educação bilíngue de surdos como uma modalidade de ensino independente. Oriundo do Senado, o texto modifica a Lei de Diretrizes e Bases da Educação Nacional (LDB) para estabelecer como educação bilíngue aquela em que a Língua Brasileira de Sinais (Libras) é considerada primeira língua, e o português escrito como segunda língua.</h8><br>
       </div>
-      <div class="medium-card-main image-educacao">
-
+      <div class="card-img-bottom">
+        <img class="card-img-bottom"
+        src="https://onaparelhosauditivos.com.br/wp-content/uploads/2018/09/eaf497_f7adc6bf3cbb4973bc08c124b19dfc67_mv2_d_2362_1476_s_2-2362x1181.jpg"
+        alt="Simbolo de surdez">
       </div>
-      <div class="botton-card">
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-          id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-          nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-          tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-          ante ipsum primis in faucibus orci luctus et ultrices posuere
-          cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-          Nullam in ligula magna.
-        </p>
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-          id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-          nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-          tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-          ante ipsum primis in faucibus orci luctus et ultrices posuere
-          cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-          Nullam in ligula magna.
-        </p>
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-          id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-          nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-          tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-          ante ipsum primis in faucibus orci luctus et ultrices posuere
-          cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-          Nullam in ligula magna.
-        </p>
-        <p class="preview-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-          imperdi
-        </p>
-      </div>
+    </div>
 
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title card-body">Alunos vão à Justiça contra norma da Poli-USP que limita estágio e dizem que regimento é 'elitista'</h3>
+        <h8 class="card-body">Estudantes afirmam que precisam trabalhar por questões financeiras, mas faculdade estabelece máximo de horas de estágio por semana. Escola Politécnica da Universidade de São Paulo declarou que aluno precisa se dedicar às disciplinas e pode usar auxílio financeiro.</h8><br>
+      </div>
+      <div class="card-img-bottom">
+        <img class="card-img-bottom"
+        src="https://s2.glbimg.com/sHeCVMagBn49Pml9Cx3rDYDMHMk=/0x0:800x535/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/P/z/1iJXzRT4So2Tw1BRkRMQ/poli-aerea.jpg"
+        alt="Imagem panoramica da Poli-USP">
+      </div>
+    </div>
+
+    
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title card-body">Unicamp terá retorno gradual das aulas presenciais</h3>
+        <h8 class="card-body">A Unicamp prevê, para o segundo semestre, uma retomada gradual das atividades presenciais nos campi acompanhando o ritmo da vacinação de alunos e servidores, segundo informou o reitor Antonio José de Almeida Meirelles, o Tom Zé, nesta terça-feira (13). </h8><br>
+      </div>
+      <div class="card-img-bottom">
+        <img class="card-img-bottom"
+        src="https://s2.glbimg.com/DsjVwTRncAyGQz_IBBYmJqk_s_8=/0x0:4819x3739/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/U/r/yuTXTGRPO08V6MEL43yQ/photo-6553837-dji-237-pano-14345169-0-2021423161724-photo-pano.jpg"
+        alt="Imagem panoramica da Unicamp">
+      </div>
     </div>
   </div>
 
 
-  <div>
-    <footer id="rodape">
-      <div class="col-md-6 offset-md-3">
-        <hr class="col-md-6 offset-md-3" />
-        <div class="footer-line">
-          <p>Desenvolvido por Carolina Zanotto e Deive Leal</p>
-          <p>Copyright © 2021</p>
-          <p>Todos os direitos reservados</p>
-        </div>
-        <hr class="col-md-6 offset-md-3" />
-      </div>
-      <div class="fale-conosco">
-        <a href="/pages/index-fale-conosco.html"><img src="/images/fale_conosco_cinza.png" width="201p"></a>
-        <a href="/pages/auth.html"><img src="/images/Login.png" width="52"></a>
-      </div>
-    </footer>
-  </div>
+  <footer class="rodape">
+    <hr />
+    <div class="footer-line">
+      <p>Desenvolvido por Carolina Zanotto e Deive Leal</p>
+      <p class="text-muted">Copyright © 2021</p>
+      <p class="text-muted">Todos os direitos reservados</p>
+    </div>
+
+    <hr />
+    <div class="col text-center">
+      <a href="/pages/index-fale-conosco.html"><img src="../images/fale_conosco_cinza.png" width="201p"></a>
+    </div>
+
+    <hr />
+    <div class="col text-center">
+      <a href="/pages/auth.html"><img src="../images/Login.png" width="201p"></a>
+    </div>
+    <hr class="col-md-8 offset-md-2" />
+
+  </footer>
 
 </body>
 

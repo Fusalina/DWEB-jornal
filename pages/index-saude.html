@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="http://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="/scripts/env.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <title>Diário de Dados - Saúde</title>
-  </head>
-  <body>
-    
-    <div>
-      <header>
-        <br><br>
-        <h1 id="title">Diário de Dados</h1>
-        <p id="sub-title">Centro de informações</p>
-        <hr id="bar_title" />
-        <br />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="http://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="/scripts/env.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>Diário de Dados - Educação</title>
+</head>
+
+<body>
+
+  <div>
+    <header>
+      <br><br>
+      <h1 id="title">Diário de Dados</h1>
+      <p id="sub-title">Centro de informações</p>
+      <hr class="col-md-8 offset-md-2" />
+      <div class="col-md-6 offset-md-3">
         <nav aria-label="Site Menu">
           <ul class="menu">
             <li><a href="../index.html">Início</a></li>
@@ -33,100 +43,112 @@
             <li><a href="index-saude.html">Saúde</a></li>
           </ul>
         </nav>
-        <br />
-        <hr />
-        <br />
-      </header>
+      </div>
+      <hr class="col-md-4 offset-md-4" />
+      <br />
+    </header>
+  </div>
+  <br />
+
+
+  <div class="card w-75 mx-auto" id="card-edu-selected">
+    <div class="card-body">
+      <h3 class="card-title card-body">No último dia do atual decreto da fase vermelha, ocupação de UTIs ainda é alta no
+        interior de Alagoas</h3>
+      <h8 class="card-body">Vivi Leão</h8><br>
+      <h16 class="card-body text-muted">08/07/2021</h16>
     </div>
-    <br />
-  
-    <div class="content-main">
-      <div class="card">
-        <div class="top-card">
-  
-          <h2 class="section-news">Saúde</h2>
-          <hr class="bar-card" />
-          <div class="author">
-            <h6 class="section-news">Reportagem por: XXXXXX</h6>
-            <h6 class="section-news">Data: XX / XX / XX</h6>
-          </div>
-  
-          <hr class="bar-card" />
-          <h3 class="section-news">Saúde vacina pessoas com deficiência grave que não possuem cadastro no BPC
-          </h3>
-        </div>
-        <div class="medium-card-main image-saude">
-  
-        </div>
-        <div class="botton-card">
-          <p class="preview-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-            imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-            id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-            nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-            tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere
-            cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-            Nullam in ligula magna.
-          </p>
-          <p class="preview-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-            imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-            id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-            nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-            tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere
-            cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-            Nullam in ligula magna.
-          </p>
-          <p class="preview-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-            imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-            id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-            nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-            tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere
-            cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-            Nullam in ligula magna.
-          </p>
-          <p class="preview-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            sagittis at augue id feugiat. Duis tincidunt elit eget egestas
-            imperdiet. Aliquam, nisi nec tempor accumsan, massa sem dapibus mi,
-            id convallis turpis lorem at quam. Ut cursus sem sapien, id pretium
-            nunc lacinia quis. Ut eleifend sit amet justo vel efficitur. Etiam
-            tincidunt ipsum purus, ac suscipit nunc fringilla et. Vestibulum
-            ante ipsum primis in faucibus orci luctus et ultrices posuere
-            cubilia curae; Aenean facilisis commodo mauris, ut facilisis enim.
-            Nullam in ligula magna.
-          </p>
-        </div>
-  
+    <div class="card-img-top">
+      <img class="card-img-top"
+        src="https://s2.glbimg.com/9aVMLgZGoZn2Uoh25LAmwPbkPjk=/0x0:878x614/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/Y/S/g59Z3ARXS0eSfuUqXUsw/whatsapp-image-2020-08-27-at-11.45.00.jpeg"
+        alt="Pessoas andando de mascara pelo centro em Alagoas">
+    </div>
+    <div class="card-body">
+      <p class="card-text card-body">
+        A validade das atuais regras de distanciamento social em Alagoas termina às 23h59 desta quinta-feira (8). Com a
+        média móvel de mortes em estabilidade no estado, o novo decreto pode trazer o relaxamento de algumas restrições
+        e até mesmo a mudança da fase vermelha para outra mais flexível. O problema é que a ocupação das UTIs no
+        interior continua alta.O atual decreto, que está em vigor desde o dia 25 de junho, já trazia a flexibilização de
+        algumas regras. O horário de bares e restaurantes, por exemplo, foi ampliado. Além de ter permitido a abertura
+        desses estabelecimentos, comércio e shoppings aos feriados e fins de semana.Duas semanas após a flexibilização
+        do último decreto, mas com o avanço da vacinação, a taxa de ocupação das UTIs Covid pelo Sistema Único de Saúde
+        (SUS) melhorou em Maceió, marcando índice de 59% de ocupação.
+      </p>
+      <p class="card-text card-body text-muted">
+        https://g1.globo.com/al/alagoas/noticia/2021/07/08/no-ultimo-dia-do-atual-decreto-da-fase-vermelha-ocupacao-de-utis-ainda-e-alta-no-interior-de-alagoas.ghtml
+      </p>
+    </div>
+  </div>
+
+  <div class="card-deck w-75 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title card-body">Variante delta ameaça recuo da pandemia. Brasil chega a 536 mil mortes</h3>
+        <h8 class="card-body">A covid-19 segue letal no Brasil. Nas últimas 24 horas, foram registradas 1.605 mortes
+          pela doença, e o país se aproxima de 536 mil vidas perdidas na pandemia. De acordo com dados das secretarias
+          estaduais de Saúde, 535.838 brasileiros morreram em decorrência do vírus até o momento.</h8>
+        <br>
+      </div>
+      <div class="card-img-bottom">
+        <img class="card-img-bottom"
+          src="https://www.redebrasilatual.com.br/wp-content/uploads/2021/05/covid-india-teste.jpg"
+          alt="Simbolo de surdez">
       </div>
     </div>
-       
-  
-  <br />
-  <div>
-    <footer id="rodape">
-        <div class="col-md-6 offset-md-3">
-            <hr class="col-md-6 offset-md-3" />
-            <div class="footer-line">
-                <p>Desenvolvido por Carolina Zanotto e Deive Leal</p>
-                <p>Copyright © 2021</p>
-                <p>Todos os direitos reservados</p>
-            </div>
-            <hr class="col-md-6 offset-md-3" />
-        </div>
-        <div class="fale-conosco">
-          <a href="/pages/index-fale-conosco.html"><img src="/images/fale_conosco_cinza.png" width="201p"></a>
-          <a href="/pages/auth.html"><img src="/images/Login.png" width="52"></a>
-        </div>
-    </footer>
-</div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title card-body">Pesquisadores do Canadá criam uma calculadora para medir o risco de demência
+        </h3>
+        <h8 class="card-body">Questionário avalia estilo de vida e fatores que podem comprometer a saúde do cérebro</h8>
+        <br>
+      </div>
+      <div class="card-img-bottom">
+        <img class="card-img-bottom"
+          src="https://s2.glbimg.com/g15zk3TsSfv3NDzXj3WQNaZ7SPM=/0x0:1920x1280/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/k/f/Y6ALFCSdSlJVBYYEU2qg/calculadorademencia.jpg"
+          alt="Imagem panoramica da Poli-USP">
+      </div>
+    </div>
+
+
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title card-body">Usuários de planos de saúde individuais terão redução na mensalidade</h3>
+        <h8 class="card-body">Pela primeira vez os planos de saúde individuais ou familiares tiveram percentual de
+          reajuste negativo, definido pela Agência Nacional de Saúde Suplementar (ANS). Isso significa que o valor das
+          mensalidades dos planos terá redução. Cerca de 8 milhões de usuários serão beneficiados pela medida. </h8><br>
+      </div>
+      <div class="card-img-bottom">
+        <img class="card-img-bottom"
+          src="https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria/2021/07/usuarios-de-planos-de-saude-individuais-terao-reducao-na-mensalidade/plano_de_saude.jpg/@@images/a8f087e0-9d48-4cd4-873c-70bb1f5a6926.jpeg"
+          alt="Imagem panoramica da Unicamp">
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="rodape">
+    <hr />
+    <div class="footer-line">
+      <p>Desenvolvido por Carolina Zanotto e Deive Leal</p>
+      <p class="text-muted">Copyright © 2021</p>
+      <p class="text-muted">Todos os direitos reservados</p>
+    </div>
+
+    <hr />
+    <div class="col text-center">
+      <a href="/pages/index-fale-conosco.html"><img src="../images/fale_conosco_cinza.png" width="201p"></a>
+    </div>
+
+    <hr />
+    <div class="col text-center">
+      <a href="/pages/auth.html"><img src="../images/Login.png" width="201p"></a>
+    </div>
+    <hr class="col-md-8 offset-md-2" />
+
+  </footer>
 
 </body>
+
 </html>
