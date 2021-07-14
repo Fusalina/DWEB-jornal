@@ -13,23 +13,36 @@ $(document).ready(function(){
         storeReg(categoria.val(), titulo.val(), resumo.val(), 
         textoMateria.val(), autor.val(), data.val(), fonte.val(), imagem.val());
     });
+
+    function storeReg(categoria, titulo, resumo, texto, autor, data, fonte, imagem){
+        db.collection(categoria).add({
+            titulo: titulo,
+            resumo: resumo,
+            texto: texto,
+            autor: autor,
+            data: data,
+            fonte: fonte,
+            imagem: imagem,
+        })
+        .then(function(){
+            alert("Materia registrada com sucesso.");  
+            limpaCampos()  
+        })
+        .catch(function (error){
+            alert("Erro ao registrar materia." + error)
+        });
+    }
+
+    function limpaCampos(){
+        categoria.val('');
+        titulo.val('');
+        resumo.val('');
+        textoMateria.val('');
+        autor.val('');
+        data.val('');
+        fonte.val('');
+        imagem.val('');
+    }
 });
 
-function storeReg(categoria, titulo, resumo, texto, autor, data, fonte, imagem){
-    db.collection(categoria).add({
-        titulo: titulo,
-        resumo: resumo,
-        texto: texto,
-        autor: autor,
-        data: data,
-        fonte: fonte,
-        imagem: imagem,
-    })
-    .then(function(){
-        alert("Materia registrada com sucesso.");    
-    })
-    .catch(function (error){
-        alert("Erro ao registrar materia." + error)
-    });
-}
 
